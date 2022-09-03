@@ -1,0 +1,22 @@
+.App {
+  margin: 20px;
+}
+
+.App-formula {
+  height: 50px;
+}
+
+.App-formula-input {
+  margin-right: 10px;
+  height: 40px;
+  font-size: 20px;
+}
+
+.App-formula-button {
+  height: 40px;
+  font-size: 20px;
+}
+
+.App-result {
+  font-size: 20px;
+}
