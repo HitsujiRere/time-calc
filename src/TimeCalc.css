@@ -12,6 +12,12 @@
   font-size: 20px;
 }
 
+.App-error {
+  margin: 0px;
+  font-size: 16px;
+  color: red;
+}
+
 .App-formula-button {
   height: 40px;
   font-size: 20px;
@@ -19,4 +25,9 @@
 
 .App-result {
   font-size: 20px;
+}
+
+.App-tips-var {
+  font-weight: bold;
+  /* font-style: oblique; */
 }
