@@ -22,7 +22,7 @@
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
-    "build": "peggy src/peggy/arithmetics.pegjs && react-scripts build",
+    "build": "peggy src/peggy/time-arithmetics.pegjs && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
