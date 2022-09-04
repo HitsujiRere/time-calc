@@ -18,7 +18,7 @@ export function TimeCalc() {
   return (
     <div className="App">
       <div className="App-formula" >
-        <input className="App-formula-input" placeholder="3h50m + 15m5s" ref={formulaRef}></input>
+        <input className="App-formula-input" placeholder="(1h10m - 2m10s) * 2" ref={formulaRef}></input>
         <button className="App-formula-button" onClick={calc}>計算</button>
       </div>
       <div className="App-result">

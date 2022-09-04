@@ -28,12 +28,13 @@ Term
 Factor
   = "(" _ @Expression _ ")"
   / Integer
+  / Time
 
 Integer "integer"
-  = _ hour:([0-9]+ "h")? _ minute:([0-9]+ "m")? _ second:([0-9]+ "s")? {
-      console.log({hour, minute, second});
-      return makeInteger(hour)*3600 + makeInteger(minute)*60 + makeInteger(second);
-    }
+  = _ [0-9]+ !("h" / "m" / "s") { return parseInt(text(), 10); }
+
+Time "time"
+  = _ hour:([0-9]+ "h")? _ minute:([0-9]+ "m")? _ second:([0-9]+ "s")? { return makeInteger(hour)*3600 + makeInteger(minute)*60 + makeInteger(second); }
 
 _ "whitespace"
   = [ \t\n\r]*
