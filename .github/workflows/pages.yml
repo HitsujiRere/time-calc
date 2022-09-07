@@ -33,18 +33,8 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v2
         
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-      - uses: actions/cache@v3
-        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
-        with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-      - name: build
-        run: yarn run build
+      - run: yarn install
+      - run: yarn run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
