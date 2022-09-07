@@ -15,11 +15,11 @@ export function TimeCalc() {
   const [formula, setFormula] = useState('')
   const [error, setError] = useState('');
   const [history, setHistory] = useState<Result[]>([]);
-  let initialize = true;
+  const initialize = useRef(true);
 
   useEffect(() => {
-    if (initialize) {
-      initialize = false;
+    if (initialize.current) {
+      initialize.current = false;
 
       const data = localStorage.getItem("history");
       if (data && data !== "[]") {
